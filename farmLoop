@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true
+do
+    sleep 1 &&
+    xdotool key --delay 500 space d s s space space space space space space &&
+    sleep 1 &&
+    xdotool key --delay 500 space x space d s s space space space space space space && 
+    sleep 1 &&
+    xdotool key --delay 500 space x space a space space space space space space && 
+    sleep 1 &&
+    xdotool key --delay 500 space x space a space space space space space space space &&
+    sleep 1 &&
+    xdotool key --delay 500 space x 
+done

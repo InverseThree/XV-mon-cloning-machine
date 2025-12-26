@@ -1,0 +1,13 @@
+#!/bin/bash
+
+farm(){
+    [[ -f /tmp/farm ]] && exit 1
+    farmLoop & echo $! > /tmp/farm
+}
+
+end() {
+  kill -15 "$(cat /tmp/farm)"
+  rm -f /tmp/farm
+}
+
+([[ -f /tmp/farm ]] && end && exit 0) || farm
