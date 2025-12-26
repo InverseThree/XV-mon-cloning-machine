@@ -1,6 +1,6 @@
 #!/bin/bash
 
-farm(){
+farm() {
     [[ -f /tmp/farm ]] && exit 1
     farmLoop & echo $! > /tmp/farm
 }
