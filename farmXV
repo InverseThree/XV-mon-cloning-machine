@@ -2,7 +2,8 @@
 
 farm() {
     [[ -f /tmp/farm ]] && exit 1
-    farmLoop & echo $! > /tmp/farm
+    farmLoop &
+    echo $! > /tmp/farm
 }
 
 end() {
